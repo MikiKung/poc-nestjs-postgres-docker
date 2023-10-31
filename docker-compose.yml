@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgresCont2
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: pass123
+    # มีไว้เพื่อ เพื่ออ่านไฟล์ Dockerfile เเละ run script ที่ setup ไว้
+    # https://chat.openai.com/share/aca1b3f1-12e9-4341-9acf-ed021c30194c
+    # volumes:
+    #   - ./initial.sql:/docker-entrypoint-initdb.d/init.sql
